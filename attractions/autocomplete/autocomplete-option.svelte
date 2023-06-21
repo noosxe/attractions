@@ -33,7 +33,10 @@
   const dispatch = createEventDispatcher();
 </script>
 
-<li on:click|stopPropagation={e => dispatch('click', { nativeEvent: e })}>
+<li
+  on:click|stopPropagation={e => dispatch('click', { nativeEvent: e })}
+  on:keypress|stopPropagation={e => dispatch('click', { nativeEvent: e })}
+>
   <button type="button">
     {#each markMatch(option.name) as part}
       {#if part.marked}<mark>{part.content}</mark>{:else}{part.content}{/if}

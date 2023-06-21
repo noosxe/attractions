@@ -110,6 +110,7 @@
   class:wrong-type={wrongType}
   class:disabled={disabled || files.length >= max}
   on:click={blockOnTiles}
+  on:keypress={blockOnTiles}
 >
   <input
     type="file"

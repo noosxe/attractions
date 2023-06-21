@@ -32,6 +32,7 @@
   <div
     class:open
     on:click|self={close}
+    on:keypress|self={close}
     class={classes('modal-overlay', _class)}
   >
     <slot closeCallback={close} />
